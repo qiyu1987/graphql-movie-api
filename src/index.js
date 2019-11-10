@@ -8,7 +8,7 @@ import schema from "./schema/movie"
 
 const app = new koa()
 const router = new koaRouter()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 console.clear()
 console.log("   :{) Welcome!\n", "  ---------------------------------------\n")
