@@ -26,9 +26,9 @@ router.get(
 	})
 )
 
+app.use(cors())
 app.use(router.routes())
 app.use(router.allowedMethods())
-app.use(cors())
 app.listen(PORT, () => {
 	const url = `http://localhost:${PORT}`
 	console.log(
