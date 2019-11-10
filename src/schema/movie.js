@@ -21,6 +21,7 @@ type Movie {
     title:String!
     release_date:String
     production_companies:[ProductionCompany]
+    rating:Int
 }
 type ProductionCompany {
     id: Int!
