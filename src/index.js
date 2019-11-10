@@ -3,6 +3,7 @@ import koa from "koa"
 import koaRouter from "koa-router"
 import koaBody from "koa-bodyparser"
 import { graphqlKoa, graphiqlKoa } from "apollo-server-koa"
+import cors from "@koa/cors"
 import schema from "./schema/movie"
 
 const app = new koa()
@@ -27,6 +28,7 @@ router.get(
 
 app.use(router.routes())
 app.use(router.allowedMethods())
+app.use(cors())
 app.listen(PORT, () => {
 	const url = `http://localhost:${PORT}`
 	console.log(
